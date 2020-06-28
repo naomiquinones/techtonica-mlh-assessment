@@ -20,11 +20,12 @@ Using a provided sample file containing data such as:
   ```
 Display the following:
 
-  - [ ] Name as a heading
+  - [x] Name as a heading
 
-  - [ ] Include the moreDetailsUrl as a link (your choice if the name itself is a link or there is a separate "View More")
+  - [x] Include the moreDetailsUrl as a link
 
-  - [ ] The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
+  - [x] The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
+  
   - [ ] Description
 
   - [ ] averagePerformance (Big O Notation)

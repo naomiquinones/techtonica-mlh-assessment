@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './components/AlgorithmCard.js';
+import AlgorithmCard from './components/AlgorithmCard.js';
+import data from './data.json';
 
 function App() {
+  const algorithms = data.map( (algorithm, index) => <AlgorithmCard
+      key={index}
+      name={algorithm.name}
+      moreDetailsUrl={algorithm.moreDetailsUrl}
+      imageUrl={algorithm.imageUrl}
+    />
+  )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="app-header">
+        <h1>Algorithms</h1>
       </header>
+      <main id="content">
+        {algorithms}
+      </main>
+      <footer className="app-footer">
+        Copyright 2020
+      </footer>
     </div>
   );
 }
