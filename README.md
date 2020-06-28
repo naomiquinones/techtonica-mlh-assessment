@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MLH Fellowship React Assessment
+This project is part of the application for the Major League Hacking fellowship.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+### Algorithm Display
+Using a provided sample file containing data such as:
+  ```
+  {
+    "name": "Bubble Sort",
+    "moreDetailsUrl": "https://en.wikipedia.org/wiki/Bubble_sort",
+    "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/4/2018/07/GettyImages-175622118-5109db9.jpg?quality=90&resize=940%2C399",
+    "pros": ["Extremely simple", "Good for students", "Cool name"],
+    "cons": ["Reeeal slow 🐢"],
+    "averagePerformance": "O(n²)",
+    "stable": true,
+    "addedOn": "31 DEC 1999",
+    "description": "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order."
+  },
+  ```
+Display the following:
 
-### `npm start`
+  - Name as a heading
+  - Include the moreDetailsUrl as a link (your choice if the name itself is a link or there is a separate "View More")
+  - The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
+  - Description
+  - averagePerformance (Big O Notation)
+  - The addedOn date - you can leave the format as it is in JSON or format it
+  - Pros & Cons lists
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Sorting/Filtering
+The initial display reflects the order from the JSON file
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Sorting
 
-### `npm test`
+A group of radio buttons at the top that lets the user sort the list.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - A-Z
+  - Most Recently Added
+  - Default (The initial sort order)
 
-### `npm run build`
+#### Filtering
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### CSS styling
+The barest of it because we need some (I disagree that is not important)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Bonus features
+Adding to this Readme in case I have time to do these
+  - A way to hide the pros/cons list, either per-algorithm or page-wide
+  - Count at the top of the page showing how many algorithms exist in the data and how many are visible
