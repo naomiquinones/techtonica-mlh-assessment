@@ -20,18 +20,18 @@ Using a provided sample file containing data such as:
   ```
 Display the following:
 
-  [] Name as a heading
-  
-  [] Include the moreDetailsUrl as a link (your choice if the name itself is a link or there is a separate "View More")
+  - [ ] Name as a heading
 
-  [] The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
-  [] Description
+  - [ ] Include the moreDetailsUrl as a link (your choice if the name itself is a link or there is a separate "View More")
 
-  [] averagePerformance (Big O Notation)
+  - [ ] The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
+  - [ ] Description
 
-  [] The addedOn date - you can leave the format as it is in JSON or format it
+  - [ ] averagePerformance (Big O Notation)
 
-  [] Pros & Cons lists
+  - [ ] The addedOn date - you can leave the format as it is in JSON or format it
+
+  - [ ] Pros & Cons lists
 
 ### Sorting/Filtering
 The initial display reflects the order from the JSON file
@@ -40,21 +40,21 @@ The initial display reflects the order from the JSON file
 
 A group of radio buttons at the top that lets the user sort the list.
 
-  [] A-Z
+  - [ ] A-Z
 
-  [] Most Recently Added
+  - [ ] Most Recently Added
 
-  [] Default (The initial sort order)
+  - [ ] Default (The initial sort order)
 
 #### Filtering
 
 A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
 ## CSS styling
- [] The barest of it because we need some (I disagree that is not important)
+  - [ ] The barest of it because we need some (I disagree that is not important)
 
 ## Bonus features
 Adding to this Readme in case I have time to do these
-  [] A way to hide the pros/cons list, either per-algorithm or page-wide
+  - [ ] A way to hide the pros/cons list, either per-algorithm or page-wide
 
-  [] Count at the top of the page showing how many algorithms exist in the data and how many are visible
+  - [ ] Count at the top of the page showing how many algorithms exist in the data and how many are visible
