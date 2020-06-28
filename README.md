@@ -43,10 +43,10 @@ A group of radio buttons at the top that lets the user sort the list.
 
 A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
-### CSS styling
+## CSS styling
 The barest of it because we need some (I disagree that is not important)
 
-### Bonus features
+## Bonus features
 Adding to this Readme in case I have time to do these
   - A way to hide the pros/cons list, either per-algorithm or page-wide
   - Count at the top of the page showing how many algorithms exist in the data and how many are visible
