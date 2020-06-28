@@ -10,6 +10,8 @@ function App() {
       name={algorithm.name}
       moreDetailsUrl={algorithm.moreDetailsUrl}
       imageUrl={algorithm.imageUrl}
+      description={algorithm.description}
+      averagePerformance={algorithm.averagePerformance}
     />
   )
   return (

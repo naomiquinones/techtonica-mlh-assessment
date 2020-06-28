@@ -25,10 +25,10 @@ Display the following:
   - [x] Include the moreDetailsUrl as a link
 
   - [x] The image. The one styling that is important is for the images to be relatively the same size on your page, regardless of the source file dimensions
-  
-  - [ ] Description
 
-  - [ ] averagePerformance (Big O Notation)
+  - [x] Description
+
+  - [x] averagePerformance (Big O Notation)
 
   - [ ] The addedOn date - you can leave the format as it is in JSON or format it
 
@@ -52,7 +52,7 @@ A group of radio buttons at the top that lets the user sort the list.
   - [ ] A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
 ## CSS styling
-  - [ ] The barest of it because we need some (I disagree that is not important)
+  - [x] The barest of it because we need some (I disagree that is not important)
 
 ## Bonus features
 Adding to this Readme in case I have time to do these

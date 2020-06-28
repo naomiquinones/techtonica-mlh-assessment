@@ -16,7 +16,9 @@ function AlgorithmCard(props) {
       </p>
       <figure>
         <img className="algorithm-image" src={props.imageUrl} alt={props.name}/>
+        <figcaption>{props.description}</figcaption>
       </figure>
+      <p>Average performance: {props.averagePerformance}</p>
     </div>
   );
 }
