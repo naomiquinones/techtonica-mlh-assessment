@@ -30,7 +30,7 @@ Display the following:
 
   - [x] averagePerformance (Big O Notation)
 
-  - [ ] The addedOn date
+  - [x] The addedOn date
 
   - [ ] Pros & Cons lists
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data';
+import rewriteDate from '../utils/rewriteDate';
 
 const Algorithms = () => {
   return (
@@ -14,8 +15,9 @@ const Algorithms = () => {
                     imageUrl={data.imageUrl}
                     description={data.description}
                     averagePerformance={data.averagePerformance}
-                    addedDate={data.addedOn}
+                    addedDate={rewriteDate(data.addedOn)}
                   />
+
                 </div>
               </>              
             );
