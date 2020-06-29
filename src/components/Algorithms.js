@@ -2,36 +2,36 @@ import React from 'react';
 import data from '../data';
 import rewriteDate from '../utils/rewriteDate';
 
-const Algorithms = () => {
+const Algorithms = (props) => {
   return (
     <>
-        {data.map( (data, index) => {
-            return (
-              <>
-                <div key={index} className="algorithm-card">
-                  <Algorithm 
-                    name={data.name}
-                    moreDetails={data.moreDetailsUrl}
-                    imageUrl={data.imageUrl}
-                    description={data.description}
-                    averagePerformance={data.averagePerformance}
-                    addedDate={rewriteDate(data.addedOn)}
-                    pros={data.pros}
-                    cons={data.cons}
-                    stable={data.stable}
-                  />
-                </div>
-              </>              
-            );
-        })}
+      {data.map( (data, index) => {
+          return (
+
+              <div key={index} className="algorithm-card">
+                <Algorithm 
+                  name={data.name}
+                  moreDetails={data.moreDetailsUrl}
+                  imageUrl={data.imageUrl}
+                  description={data.description}
+                  averagePerformance={data.averagePerformance}
+                  addedDate={rewriteDate(data.addedOn)}
+                  pros={data.pros}
+                  cons={data.cons}
+                  stable={data.stable}
+                />
+              </div>
+             
+          );
+      })}
     </>
   );
 };
 
 const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate, pros, cons, stable}) => {
   if(!name) return <div >No data</div>;
-  const prosList = pros.length ? pros.map(pro => <li>{pro}</li>) : null;
-  const consList = cons.length ? cons.map(con => <li>{con}</li>) : null;
+  const prosList = pros.length ? pros.map((pro,index) => <li key={index}>{pro}</li>) : null;
+  const consList = cons.length ? cons.map((con,index) => <li key={index}>{con}</li>) : null;
   const stability = stable ? "yes" : "no";
 
   return (

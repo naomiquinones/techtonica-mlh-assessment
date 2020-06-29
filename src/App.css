@@ -60,3 +60,6 @@ input {
   display: inline-block;
   margin-right: .75rem;
 }
+.filter-form {
+  margin: 1.5rem;
+}
