@@ -35,7 +35,7 @@ const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance
 
   return (
     <>
-      <h2>name</h2>
+      <h2>{name}</h2>
       <a className="moreDetails" 
         href={moreDetails}
         target="_blank"
@@ -47,13 +47,12 @@ const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance
         <img className="algorithm-image" src={imageUrl} alt={name}/>
         <figcaption>{description}</figcaption>
       </figure>
-      <p>Average performance: {averagePerformance}</p>
-      <p>Date added: {addedDate}</p>
-      <p>Pros:</p>
+      <p><span className="sectionTitle bigO">Average performance:</span> {averagePerformance}</p>
+      <p><span className="sectionTitle date">Date added:</span> {addedDate}</p>
+      <p><span className="sectionTitle pro">Pros:</span></p>
       <ul>{prosList}</ul>
-      <p>Cons:</p>
+      <p><span className="sectionTitle con">Cons:</span></p>
       <ul>{consList}</ul>
-
     </>
   );
 };

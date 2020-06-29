@@ -12,21 +12,24 @@ code {
     monospace;
 }
 h1 {
-  color: #684400;
+  background-color: #684400;
+  color:#fefefe;
   font-size: 3em;
-  border-bottom: 1px solid #e7dbc7;
-  padding-bottom: .25rem;
+  padding: 1rem 2.5% 1.5rem;
+  margin: 1rem -1.25% 0;
 }
 
 h2,h3,h4,h5,h6 {
-  color: #0090e4;
-  margin: .25rem 0;
+  background-color: #0090e4;
+  color:#fefefe;
+  margin: .25rem 0 .35rem -2.5%;
+  padding:.125em 1.25%;
 }
 a[href] {
-  color: #029b7a;
+  color: #01a884;
 }
 main {
-  padding: .5rem 2.5%;
+  padding: 0 2.5%;
 }
 figure {
   margin: 0;
