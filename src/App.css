@@ -12,6 +12,9 @@
   margin: 1.5rem 0 2em;
   background-color: #fdfcf9;
 }
+.algorithm-name {
+  width: 75%;
+}
 .algorithm-image {
   border: 1px solid #ddd;
   padding: .5rem;
@@ -33,4 +36,7 @@
 }
 .con {
   color: rgb(255, 65, 65);
+}
+.stable {
+  color: rgb(136, 132, 152);
 }

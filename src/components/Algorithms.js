@@ -18,8 +18,8 @@ const Algorithms = () => {
                     addedDate={rewriteDate(data.addedOn)}
                     pros={data.pros}
                     cons={data.cons}
+                    stable={data.stable}
                   />
-
                 </div>
               </>              
             );
@@ -28,14 +28,15 @@ const Algorithms = () => {
   );
 };
 
-const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate, pros, cons}) => {
+const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate, pros, cons, stable}) => {
   if(!name) return <div >No data</div>;
   const prosList = pros.length ? pros.map(pro => <li>{pro}</li>) : null;
   const consList = cons.length ? cons.map(con => <li>{con}</li>) : null;
+  const stability = stable ? "yes" : "no";
 
   return (
     <>
-      <h2>{name}</h2>
+      <h2 className="algorithm-name">{name}</h2>
       <a className="moreDetails" 
         href={moreDetails}
         target="_blank"
@@ -53,6 +54,7 @@ const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance
       <ul>{prosList}</ul>
       <p><span className="sectionTitle con">Cons:</span></p>
       <ul>{consList}</ul>
+      <p><span className="sectionTitle stable">Stable:</span> {stability}</p>
     </>
   );
 };
