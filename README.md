@@ -30,7 +30,7 @@ Display the following:
 
   - [x] averagePerformance (Big O Notation)
 
-  - [ ] The addedOn date - you can leave the format as it is in JSON or format it
+  - [ ] The addedOn date
 
   - [ ] Pros & Cons lists
 
