@@ -32,7 +32,7 @@ Display the following:
 
   - [x] The addedOn date
 
-  - [ ] Pros & Cons lists
+  - [x] Pros & Cons lists
 
 ### Sorting/Filtering
 The initial display reflects the order from the JSON file

@@ -16,6 +16,8 @@ const Algorithms = () => {
                     description={data.description}
                     averagePerformance={data.averagePerformance}
                     addedDate={rewriteDate(data.addedOn)}
+                    pros={data.pros}
+                    cons={data.cons}
                   />
 
                 </div>
@@ -26,8 +28,11 @@ const Algorithms = () => {
   );
 };
 
-const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate}) => {
+const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate, pros, cons}) => {
   if(!name) return <div >No data</div>;
+  const prosList = pros.length ? pros.map(pro => <li>{pro}</li>) : null;
+  const consList = cons.length ? cons.map(con => <li>{con}</li>) : null;
+
   return (
     <>
       <h2>name</h2>
@@ -44,6 +49,11 @@ const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance
       </figure>
       <p>Average performance: {averagePerformance}</p>
       <p>Date added: {addedDate}</p>
+      <p>Pros:</p>
+      <ul>{prosList}</ul>
+      <p>Cons:</p>
+      <ul>{consList}</ul>
+
     </>
   );
 };

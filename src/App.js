@@ -14,7 +14,7 @@ function App() {
         <Algorithms />
       </main>
       <footer className="app-footer">
-        Copyright 2020
+        Copyright &copy; 2020 NQ
       </footer>
     </div>
   );
