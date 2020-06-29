@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './components/Algorithms.js';
 import Algorithms from './components/Algorithms.js';
-// import data from './data.json';
+import SortingButtons from './components/SortingButtons';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <h1>Algorithms</h1>
       </header>
       <main id="content">
+        <SortingButtons />
         <Algorithms />
       </main>
       <footer className="app-footer">
@@ -19,5 +20,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

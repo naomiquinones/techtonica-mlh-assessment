@@ -40,3 +40,23 @@
 .stable {
   color: rgb(136, 132, 152);
 }
+
+.sort-form {
+  margin-top: 1rem;
+}
+fieldset {
+  border-radius: 5px;
+  border: 1px solid #684400;
+}
+.sort-label {
+  display: block;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+.sort-label:hover {
+  background-color: rgb(253, 239, 207);
+}
+input {
+  display: inline-block;
+  margin-right: .75rem;
+}
