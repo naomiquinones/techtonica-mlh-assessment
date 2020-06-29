@@ -52,7 +52,7 @@ A group of radio buttons at the top that lets the user sort the list.
   - [ ] A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
 ## CSS styling
-  - [x] The barest of it because we need some (I disagree that is not important)
+  - [x] A little
 
 ## Bonus features
 Adding to this Readme in case I have time to do these
