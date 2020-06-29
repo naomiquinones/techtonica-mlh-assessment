@@ -4,30 +4,44 @@ import data from '../data';
 const Algorithms = () => {
   return (
     <>
-      <div className="algorithm-card">
-        {data.map( (algorithm, index) => {
+        {data.map( (data, index) => {
             return (
               <>
-                <h2 key={index}>{algorithm.name}</h2>
-                <p>
-                  <a
-                    className="moreDetails"
-                    href={algorithm.moreDetailsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {algorithm.moreDetailsUrl}
-                  </a>
-                </p>
-                <figure>
-                  <img className="algorithm-image" src={algorithm.imageUrl} alt={algorithm.name}/>
-                  <figcaption>{algorithm.description}</figcaption>
-                </figure>
-                <p>Average performance: {algorithm.averagePerformance}</p>
-              </>
+                <div key={index} className="algorithm-card">
+                  <Algorithm 
+                    name={data.name}
+                    moreDetails={data.moreDetailsUrl}
+                    imageUrl={data.imageUrl}
+                    description={data.description}
+                    averagePerformance={data.averagePerformance}
+                    addedDate={data.addedOn}
+                  />
+                </div>
+              </>              
             );
         })}
-      </div>
+    </>
+  );
+};
+
+const Algorithm = ({name, moreDetails, imageUrl, description, averagePerformance, addedDate}) => {
+  if(!name) return <div >No data</div>;
+  return (
+    <>
+      <h2>name</h2>
+      <a className="moreDetails" 
+        href={moreDetails}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {moreDetails}
+      </a>
+      <figure>
+        <img className="algorithm-image" src={imageUrl} alt={name}/>
+        <figcaption>{description}</figcaption>
+      </figure>
+      <p>Average performance: {averagePerformance}</p>
+      <p>Date added: {addedDate}</p>
     </>
   );
 };
