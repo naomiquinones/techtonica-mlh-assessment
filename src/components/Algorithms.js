@@ -1,8 +1,7 @@
 import React from 'react';
-import data from '../data';
 import rewriteDate from '../utils/rewriteDate';
 
-const Algorithms = (props) => {
+const Algorithms = ({data}) => {
   return (
     <>
       {data.map( (data, index) => {

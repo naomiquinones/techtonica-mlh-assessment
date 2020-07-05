@@ -1,13 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import './components/Algorithms.js';
 import Algorithms from './components/Algorithms.js';
 import SortingButtons from './components/SortingButtons';
+import rawData from './data';
+// transform data to make datestr into date object
+const data = rawData;
 
 function App() {
-  const [showStable, setShowStable] = useState(false);
+  const [displayData, setDisplayData] = React.useState(data);
+  const [showStable, setShowStable] = React.useState(false);
+  const [sortOrder, setSortOrder] = React.useState("default");
 
-  const handleClick = () => setShowStable(showStable => !showStable);
+  React.useEffect( () => {
+    const filtered = showStable ? data.filter( item => item.stable ): data;
+    let sorted;
+    switch (sortOrder) {
+      case 'a-z':
+        sorted = [...filtered];
+        sorted.sort( (a,b) => (a.name < b.name) ? -1 : 
+          (a.name > b.name) ? 1 :
+          0
+        );
+        break;
+      case 'recently-added':
+        sorted = [...filtered];
+        // sort by a.addedOn > b.addedOn 
+        break;
+      default:
+        sorted = filtered;
+    }
+    setDisplayData(sorted);
+  },[showStable,sortOrder])
   
   return (
     <div className="App">
@@ -15,9 +39,10 @@ function App() {
         <h1>Algorithms</h1>
       </header>
       <main id="content">
-        <SortingButtons />
-        <FilterCheckbox onClick={handleClick} showStable={showStable} />
-        <Algorithms />
+        <p>We have {displayData.length} of {data.length} algorithms.</p>
+        <SortingButtons sortOrder={sortOrder} setSortOrder={setSortOrder} />
+        <FilterCheckbox showStable={showStable} setShowStable={setShowStable} />
+        <Algorithms data={displayData} />
       </main>
       <footer className="app-footer">
         Copyright &copy; 2020 NQ
@@ -26,7 +51,7 @@ function App() {
   );
 }
 
-const FilterCheckbox = (handleClick, showStable) => {
+const FilterCheckbox = ({showStable, setShowStable}) => {
   return (
     <form className="filter-form">
       <label className="filter-label">
@@ -34,8 +59,10 @@ const FilterCheckbox = (handleClick, showStable) => {
           type="checkbox" 
           name="filter" 
           className="filter-checkbox"
-          onClick={handleClick}
-          defaultChecked={showStable}
+          onChange={ e => {
+            setShowStable(!showStable);
+          }}
+          checked={showStable}
         />
         Show only stable algorithms
       </label>
