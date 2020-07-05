@@ -39,7 +39,7 @@ function App() {
         <h1>Algorithms</h1>
       </header>
       <main id="content">
-        <p>We have {displayData.length} of {data.length} algorithms.</p>
+        <p className="count">Displaying {displayData.length} of {data.length} algorithms.</p>
         <SortingButtons sortOrder={sortOrder} setSortOrder={setSortOrder} />
         <FilterCheckbox showStable={showStable} setShowStable={setShowStable} />
         <Algorithms data={displayData} />

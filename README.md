@@ -41,15 +41,15 @@ The initial display reflects the order from the JSON file
 
 A group of radio buttons at the top that lets the user sort the list.
 
-  - [ ] A-Z
+  - [x] A-Z
 
   - [ ] Most Recently Added
 
-  - [ ] Default (The initial sort order)
+  - [x] Default (The initial sort order)
 
 #### Filtering
 
-  - [ ] A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
+  - [x] A filter checkbox above the list labeled "Only Show Stable" toggles the view of the stable algorithms
 
 ## CSS styling
   - [x] A little
@@ -58,4 +58,4 @@ A group of radio buttons at the top that lets the user sort the list.
 Adding to this Readme in case I have time to do these
   - [ ] A way to hide the pros/cons list, either per-algorithm or page-wide
 
-  - [ ] Count at the top of the page showing how many algorithms exist in the data and how many are visible
+  - [x] Count at the top of the page showing how many algorithms exist in the data and how many are visible

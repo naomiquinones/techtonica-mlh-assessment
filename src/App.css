@@ -1,3 +1,5 @@
+@import 'index.css';
+
 .app-header {
   padding: 0 2.5% ;
 }
@@ -62,4 +64,9 @@ input {
 }
 .filter-form {
   margin: 1.5rem;
+}
+.count {
+  text-align: right;
+  font-size: 2rem;
+  color: var(--main-blue,green);
 }
