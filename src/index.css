@@ -1,4 +1,5 @@
 :root {
+  --main-brown: #684400;
   --main-blue: #0090e4;
 }
 body {
@@ -15,7 +16,7 @@ code {
     monospace;
 }
 h1 {
-  background-color: #684400;
+  background-color: var(--main-brown, #684400);
   color:#fefefe;
   font-size: 3em;
   padding: 1rem 2.5% 1.5rem;

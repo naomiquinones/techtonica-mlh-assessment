@@ -43,9 +43,15 @@ function App() {
         <h1>Algorithms</h1>
       </header>
       <main id="content">
-        <p className="count">Displaying {displayData.length} of {data.length} algorithms.</p>
         <SortingButtons sortOrder={sortOrder} setSortOrder={setSortOrder} />
         <FilterCheckbox showStable={showStable} setShowStable={setShowStable} />
+        <p className="count">Displaying {
+            (displayData.length !== data.length) 
+            ?
+            <span>{displayData.length}</span> 
+            :
+            `${displayData.length}`
+          } of {data.length} algorithms.</p>
         <Algorithms data={displayData} />
       </main>
       <footer className="app-footer">
