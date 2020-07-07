@@ -26,6 +26,10 @@ function App() {
       case 'recently-added':
         sorted = [...filtered];
         // sort by a.addedOn > b.addedOn 
+        sorted.sort( (a,b) => ( Date.parse(a.addedOn) > Date.parse(b.addedOn) ) ? -1 :
+          ( Date.parse(a.addedOn) < Date.parse(b.addedOn) ) ? 1 :
+          0
+        );
         break;
       default:
         sorted = filtered;

@@ -43,7 +43,7 @@ A group of radio buttons at the top that lets the user sort the list.
 
   - [x] A-Z
 
-  - [ ] Most Recently Added
+  - [x] Most Recently Added
 
   - [x] Default (The initial sort order)
 
