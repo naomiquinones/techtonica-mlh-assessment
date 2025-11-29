@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
-import './components/Algorithms.js';
-import Algorithms from './components/Algorithms.js';
-import SortingButtons from './components/SortingButtons';
-import rawData from './data';
+import React from "react";
+import "./App.css";
+import "./components/Algorithms.jsx";
+import Algorithms from "./components/Algorithms.jsx";
+import SortingButtons from "./components/SortingButtons.jsx";
+import rawData from "./data";
 // transform data to make datestr into date object
 const data = rawData;
 
@@ -12,31 +12,31 @@ function App() {
   const [showStable, setShowStable] = React.useState(false);
   const [sortOrder, setSortOrder] = React.useState("default");
 
-  React.useEffect( () => {
-    const filtered = showStable ? data.filter( item => item.stable ): data;
+  React.useEffect(() => {
+    const filtered = showStable ? data.filter((item) => item.stable) : data;
     let sorted;
     switch (sortOrder) {
-      case 'a-z':
+      case "a-z":
         sorted = [...filtered];
-        sorted.sort( (a,b) => (a.name < b.name) ? -1 : 
-          (a.name > b.name) ? 1 :
-          0
-        );
+        sorted.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
         break;
-      case 'recently-added':
+      case "recently-added":
         sorted = [...filtered];
-        // sort by a.addedOn > b.addedOn 
-        sorted.sort( (a,b) => ( Date.parse(a.addedOn) > Date.parse(b.addedOn) ) ? -1 :
-          ( Date.parse(a.addedOn) < Date.parse(b.addedOn) ) ? 1 :
-          0
+        // sort by a.addedOn > b.addedOn
+        sorted.sort((a, b) =>
+          Date.parse(a.addedOn) > Date.parse(b.addedOn)
+            ? -1
+            : Date.parse(a.addedOn) < Date.parse(b.addedOn)
+            ? 1
+            : 0
         );
         break;
       default:
         sorted = filtered;
     }
     setDisplayData(sorted);
-  },[showStable,sortOrder])
-  
+  }, [showStable, sortOrder]);
+
   return (
     <div className="App">
       <header className="app-header">
@@ -45,31 +45,31 @@ function App() {
       <main id="content">
         <SortingButtons sortOrder={sortOrder} setSortOrder={setSortOrder} />
         <FilterCheckbox showStable={showStable} setShowStable={setShowStable} />
-        <p className="count">Displaying {
-            (displayData.length !== data.length) 
-            ?
-            <span>{displayData.length}</span> 
-            :
+        <p className="count">
+          Displaying{" "}
+          {displayData.length !== data.length ? (
+            <span>{displayData.length}</span>
+          ) : (
             `${displayData.length}`
-          } of {data.length} algorithms.</p>
+          )}{" "}
+          of {data.length} algorithms.
+        </p>
         <Algorithms data={displayData} />
       </main>
-      <footer className="app-footer">
-        Copyright &copy; 2020 NQ
-      </footer>
+      <footer className="app-footer">Copyright &copy; 2020 NQ</footer>
     </div>
   );
 }
 
-const FilterCheckbox = ({showStable, setShowStable}) => {
+const FilterCheckbox = ({ showStable, setShowStable }) => {
   return (
     <form className="filter-form">
       <label className="filter-label">
-        <input 
-          type="checkbox" 
-          name="filter" 
+        <input
+          type="checkbox"
+          name="filter"
           className="filter-checkbox"
-          onChange={ e => {
+          onChange={(e) => {
             setShowStable(!showStable);
           }}
           checked={showStable}
@@ -77,8 +77,7 @@ const FilterCheckbox = ({showStable, setShowStable}) => {
         Show only stable algorithms
       </label>
     </form>
-  )
-}
-
+  );
+};
 
 export default App;
